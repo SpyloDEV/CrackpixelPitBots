@@ -1,0 +1,17 @@
+name: CrackpixelPitBots
+version: 1.0
+main: crackpixel.pitbots.CrackpixelPitBotsPlugin
+author: Spylo
+depend: [packetevents]
+softdepend: [CrackpixelCore]
+
+commands:
+  pitbots:
+    description: Main command for PitBots
+    usage: /pitbots
+    aliases: [pbots]
+
+permissions:
+  pitbots.admin:
+    description: Allows managing Crackpixel PitBots
+    default: op

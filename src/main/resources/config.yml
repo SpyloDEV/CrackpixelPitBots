@@ -1,0 +1,258 @@
+bot-scaling:
+  enabled: true
+  absolute-max-bots: 28
+  minimum-real-players: 1
+  rules:
+    - max-players: 9
+      bots: 22
+    - max-players: 15
+      bots: 18
+    - max-players: 20
+      bots: 14
+    - max-players: 30
+      bots: 10
+
+performance:
+  enabled: true
+  tps-reduce-below: 18.5
+  tps-pause-below: 16.0
+  lagged-bot-percent: 50
+
+spawn:
+  edge-spawns-enabled: true
+  edge-spawn-inset: 1.5
+  edge-spawn-jitter: 2.25
+  avoid-player-radius: 5.5
+  edge-spawn-points: []
+  center-spawn-radius: 1.0
+  min-radius: 0.0
+  max-radius: 8.75
+
+arena-bounds:
+  enabled: false
+
+bots:
+  health: 20.0
+  speed-min: 0.41
+  speed-max: 0.53
+  attack-damage: 1.0
+  follow-range: 11.75
+  attack-range: 2.25
+  can-kill-players: true
+  safe-player-health-floor: 0.0
+  min-bot-distance: 2.4
+  aggro-memory-ms: 4500
+  respawn-delay-ms: 3000
+  spawn-attack-delay-ms: 1200
+  attack-cooldown-min-ms: 260
+  attack-cooldown-max-ms: 460
+  roam-retarget-min-ms: 2500
+  roam-retarget-max-ms: 6000
+  search-min-ms: 900
+  search-max-ms: 1650
+
+combat:
+  direct-player-damage: false
+  direct-chase-enabled: false
+  ambient-engage-range: 6.15
+  damage-multiplier: 0.72
+  shared-target-penalty: 0.24
+  strafe-enabled: true
+  strafe-strength: 0.095
+  strafe-min-distance: 1.25
+  strafe-min-interval-ms: 220
+  strafe-max-interval-ms: 520
+  hurt-cooldown-ms: 220
+  attack-windup-ms: 40
+  attack-windup-randomness-ms: 16
+  aim-settle-min-ms: 12
+  aim-settle-max-ms: 28
+  attack-facing-max-angle: 58.0
+  aim-jitter: 1.1
+  player-hit-reach: 3.35
+  player-facing-max-angle: 75.0
+  line-of-sight-required: true
+  line-of-sight-grace-ms: 650
+  target-switch-min-commit-ms: 220
+  target-switch-max-commit-ms: 520
+  target-switch-distance-bias: 1.25
+  attack-cooldown-jitter-ms: 70
+  target-switch-attack-delay-min-ms: 4
+  target-switch-attack-delay-max-ms: 18
+  line-of-sight-reacquire-delay-min-ms: 4
+  line-of-sight-reacquire-delay-max-ms: 16
+  knockback-horizontal: 0.50
+  knockback-sprint-bonus: 0.16
+  knockback-enchant-bonus: 0.18
+  knockback-facing-weight: 0.75
+  knockback-decay: 0.80
+  hit-reaction-ms: 210
+  bot-hit-knockback-horizontal: 0.26
+  bot-hit-knockback-vertical: 0.08
+  rhythm-enabled: true
+  rhythm-reset-min-ms: 75
+  rhythm-reset-max-ms: 135
+  rhythm-burst-min-ms: 220
+  rhythm-burst-max-ms: 360
+  rhythm-backoff-strength: 0.08
+  rhythm-forward-burst-strength: 0.20
+  preferred-distance-min: 1.15
+  preferred-distance-max: 1.55
+
+movement:
+  ground-fix: true
+  anti-stuck: true
+  stuck-distance-threshold: 0.12
+  stuck-ticks-before-teleport: 15
+  safe-step: true
+  max-step-up: 1.5
+  max-step-down: 3.0
+  strafe-strength: 0.16
+  yaw-jitter: 0.8
+  head-pitch-jitter: 2.0
+  head-look-max-pitch: 18.0
+  turn-speed-degrees: 28.0
+  combat-turn-speed-degrees: 42.0
+  idle-enabled: true
+  idle-chance: 0.06
+  idle-check-min-ms: 2500
+  idle-check-max-ms: 6500
+  idle-min-ms: 350
+  idle-max-ms: 1000
+  speed-change-min-ms: 1800
+  speed-change-max-ms: 4500
+  speed-multiplier-min: 0.96
+  speed-multiplier-max: 1.18
+  obstacle-reposition-enabled: true
+  obstacle-reposition-min-ms: 280
+  obstacle-reposition-max-ms: 620
+  obstacle-reposition-strength: 0.28
+  obstacle-corner-peek-strength: 0.16
+
+tiers:
+  easy:
+    weight: 0.34
+    speed-multiplier: 0.92
+    damage-multiplier: 0.88
+    range-multiplier: 0.92
+    strafe-multiplier: 0.72
+    reaction-multiplier: 1.18
+  normal:
+    weight: 0.46
+    speed-multiplier: 1.0
+    damage-multiplier: 1.0
+    range-multiplier: 1.0
+    strafe-multiplier: 1.0
+    reaction-multiplier: 1.0
+  tryhard:
+    weight: 0.20
+    speed-multiplier: 1.10
+    damage-multiplier: 1.05
+    range-multiplier: 1.08
+    strafe-multiplier: 1.22
+    reaction-multiplier: 0.82
+
+feedback:
+  enabled: false
+  hit-effect: ""
+  hit-effect-data: 0
+  hit-sound: ""
+  hit-sound-volume: 0.35
+  hit-sound-pitch: 1.4
+  kill-effect: ""
+  kill-effect-data: 0
+  kill-sound: ""
+  kill-sound-volume: 0.8
+  kill-sound-pitch: 1.35
+
+packets:
+  view-range-enabled: true
+  view-range: 96.0
+
+player-damage:
+  fist: 2.0
+  wood-sword: 4.0
+  stone-sword: 5.0
+  iron-sword: 6.0
+  diamond-sword: 7.0
+
+equipment:
+  mirror-random-player-loadout: true
+  main-hand: IRON_SWORD
+  helmet: CHAINMAIL_HELMET
+  chestplate: CHAINMAIL_CHESTPLATE
+  leggings: CHAINMAIL_LEGGINGS
+  boots: CHAINMAIL_BOOTS
+
+cosmetics:
+  random-names:
+    - Zayden
+    - Ryker
+    - Nolan
+    - Elias
+    - Kairo
+    - Mason
+    - Jxmes
+    - Tobi
+    - Leon
+    - Benji
+    - Luca
+    - Aiden
+    - Kayden
+    - Jayce
+    - Liam
+    - Noaah
+    - Jaden
+    - Zeno
+    - Mert
+    - Emir
+    - Kian
+    - Devin
+    - Levin
+    - Nico
+    - Miko
+    - Zayn
+    - Julez
+    - Rayan
+    - Arda
+    - Santi
+    - Dario
+    - Enzo
+    - Milo
+    - Loris
+    - Nox
+    - Elian
+    - Yasin
+    - Rami
+    - Kerem
+    - Vito
+  skin-usernames:
+    - Technoblade
+    - Notch
+    - jeb_
+    - Dinnerbone
+    - Grumm
+    - Dream
+    - GeorgeNotFound
+    - Sapnap
+    - BadBoyHalo
+    - Skeppy
+  skins: []
+
+bot-rewards:
+  gold-min: 5
+  gold-max: 10
+  xp-min: 10
+  xp-max: 20
+  vanilla-exp: 0
+  anti-farm-enabled: true
+  abnormal-window-ms: 30000
+  abnormal-max-kills: 8
+  abnormal-max-radius: 4.5
+  abnormal-reward-multiplier: 0.25
+  commands: []
+
+anti-farm:
+  ignore-afk-targets: true
+  afk-threshold-ms: 8000
+  afk-move-threshold: 1.2
